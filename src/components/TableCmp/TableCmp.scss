@@ -1,0 +1,64 @@
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.ReactTable {
+  .rt-thead {
+    &.-filters {
+      .rt-th {
+        border: 0;
+      }
+    }
+
+    .rt-th {
+      text-transform: capitalize;
+      font-weight: bold;
+      padding: 15px 0;
+      outline: none;
+
+      &.-cursor-pointer {
+        div {
+          &:after {
+            content: '';
+            background-image: url('../../assets/images/sort.svg');
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 0;
+            background-size: 100%;
+          }
+        }
+
+        &.-sort-asc {
+          div {
+            &:after {
+              background-image: url('../../assets/images/sort-up.svg');
+            }
+          }
+        }
+
+        &.-sort-desc {
+          div {
+            &:after {
+              background-image: url('../../assets/images/sort-down.svg');
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .rt-tbody {
+    .rt-td {
+      text-align: center;
+    }
+  }
+
+  .rt-noData {
+    font-weight: bold;
+    top: 100%;
+    margin-top: 100px
+  }
+}
